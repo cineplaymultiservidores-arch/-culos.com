@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfilScan - Encontre Perfis Públicos em Segundos</title>
+    <meta name="description" content="Descubra perfis públicos em redes sociais. Segurança digital e encontro de pessoas.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="barra-topo">
+        🚀 TECNOLOGIA DE BUSCA EM +50 REDES SOCIAIS
+    </div>
+
+    <nav>
+        <div class="logo">PERFIL<span>SCAN</span></div>
+        <div class="menu">
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#precos">Preços</a>
+            <a onclick="abrirWhats('quero suporte')" class="btn-contato">SUPORTE</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="grid-bg"></div>
+        <div class="hero-texto">
+            <span class="tag">IA DE BUSCA</span>
+            <h1>Encontre Qualquer Perfil Público<br>em <span>Segundos</span></h1>
+            <p>Nossa IA escaneia +50 redes sociais e te mostra onde a pessoa tem perfil público. Use com responsabilidade.</p>
+            
+            <div class="caixa-busca">
+                <input type="text" id="nomeBusca" placeholder="Digite o Nome Completo">
+                <input type="text" id="cidadeBusca" placeholder="Cidade">
+                <button onclick="iniciarBusca()">BUSCAR AGORA</button>
+            </div>
+            <p class="aviso">*Buscamos apenas dados públicos. Use de forma ética.</p>
+        </div>
+    </header>
+
+    <section id="como-funciona" class="como-funciona">
+        <h2>COMO FUNCIONA EM 3 PASSOS</h2>
+        <div class="grid-passos">
+            <div class="passo">
+                <div class="numero">1</div>
+                <h3>Digite os Dados</h3>
+                <p>Nome e cidade da pessoa que você quer encontrar</p>
+            </div>
+            <div class="passo">
+                <div class="numero">2</div>
+                <h3>Nossa IA Busca</h3>
+                <p>Escaneamos Instagram, Facebook, TikTok, Tinder e mais</p>
+            </div>
+            <div class="passo">
+                <div class="numero">3</div>
+                <h3>Receba o Relatório</h3>
+                <p>Veja todos os perfis públicos encontrados em 1 lugar</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="precos" class="precos">
+        <h2>LIBERE O RELATÓRIO COMPLETO</h2>
+        <div class="grid-precos">
+            <div class="plano">
+                <h3>Busca Básica</h3>
+                <p class="preco">R$14<span>,90</span></p>
+                <ul><li>✓ 1 Busca Completa</li><li>✓ Redes Principais</li><li>✓ Relatório em PDF</li></ul>
+                <a onclick="abrirWhats('quero busca basica')" class="btn-plano">COMPRAR</a>
+            </div>
+            <div class="plano destaque">
+                <span class="mais-vendido">MAIS USADO</span>
+                <h3>Busca Pro</h3>
+                <p class="preco">R$29<span>,90</span></p>
+                <ul><li>✓ 5 Buscas Completas</li><li>✓ +50 Redes Sociais</li><li>✓ Relatório em PDF</li><li>✓ Suporte Prioritário</li></ul>
+                <a onclick="abrirWhats('quero busca pro')" class="btn-plano">COMPRAR</a>
+            </div>
+            <div class="plano">
+                <h3>Busca Ilimitada</h3>
+                <p class="preco">R$59<span>,90</span></p>
+                <ul><li>✓ Buscas Ilimitadas 30 Dias</li><li>✓ +50 Redes Sociais</li><li>✓ Relatório em PDF</li><li>✓ Suporte 24h</li></ul>
+                <a onclick="abrirWhats('quero busca ilimitada')" class="btn-plano">COMPRAR</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>PERFILSCAN © 2026 - Ferramenta de busca em dados públicos.</p>
+        <p>Use com responsabilidade. Não nos responsabilizamos pelo uso indevido.</p>
+    </footer>
+
+    <a onclick="abrirWhats('olá')" class="whatsapp-float">💬</a>
+
+<script>
+    function iniciarBusca() {
+        const nome = document.getElementById('nomeBusca').value;
+        const cidade = document.getElementById('cidadeBusca').value;
+        if(nome.trim() !== "") {
+            document.getElementById('precos').scrollIntoView({ behavior: 'smooth' });
+            alert(`Busca por "${nome}" em "${cidade}" iniciada! \nLibere o relatório completo abaixo.`);
+        } else {
+            alert("Por favor, digite um nome para buscar!");
+        }
+    }
+
+    function abrirWhats(mensagem) {
+        const texto = `Olá! Gostaria de: ${mensagem}`;
+        const numero = "5511943510381"; // TROCA PELO SEU NUMERO
+        window.open(`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
